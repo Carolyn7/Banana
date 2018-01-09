@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block body %}
+<style>
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+        text-align: center;
+        margin-top:6%;
+}
+    #bakerzin{
+        margin-left:45%;
+        position:absolute;
+        margin-top:-5%;
+        font-size:35px;
+        color: black;
+
+    }
+</style>
+<body>
+    <img src="/static/images/bakerzin.jpg" width="100%" height="300px">
+    <table style="width:100%">
+    <caption id="bakerzin">Bakerzin</caption>
+      <tr>
+        <th>Promotions</th>
+        <td>15% off total Bill<br>
+            Additional $5 return voucher with min. of S$25 spend (valid till 31 Oct 2017)</td>
+      </tr>
+       <tr>
+            <th>Promotion Period</th>
+            <td>01/01/2017 to 31/12/2017</td>
+       </tr>
+        <tr>
+            <th>Terms & Conditions</th>
+            <td>DBS General Promotions Terms and Conditions apply, please refer to www.dbs.com.sg/dbscardstnc</td>
+        </tr>
+    </table>
+    <br><br>
+{% endblock %}l>

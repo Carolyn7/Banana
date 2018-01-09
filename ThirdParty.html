@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <style>
+        .text{
+            text-align:center;
+        }
+        #proceed-btn{
+            background-color: #555555;
+            border: none;
+            color: white;
+            padding: 7px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 11px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        #proceed-btn:hover {
+            background-color: darkgrey;
+            color: white;
+        }
+    </style>
+
+    <head>
+		<meta charset="utf-8">
+		<title>Credit Card</title>
+	</head>
+
+	<div class="text">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+		<h2><b>You are about to access a Third-Party Website.</b></h2>
+		<p>Do you wish to proceed?</p>
+        <a href="http://www.nuss.org.sg/dining-outlets/all-guild-houses.html">
+            <button id='proceed-btn' type="button" alt="">Proceed</button>
+        </a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="/CardDetails">
+            <button id="proceed-btn" type="button" alt="">Cancel</button>
+        </a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+{% endblock %}

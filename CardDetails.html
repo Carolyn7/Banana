@@ -1,0 +1,411 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <style>
+        .body{
+            margin-right:17px;
+            margin-left:17px;
+            padding:0;
+            width:auto;
+            font-family:arial;
+        }
+        .heading{
+            text-align:center;
+            height:350px;
+            background:#262626;
+            background-image: url('/static/images/background.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 350px;
+        }
+        .heading h1{
+            margin:0;
+            line-height:100px;
+            color:#fff;
+            font-size:48px;
+        }
+        .cardnavbar ul{
+            margin:0;
+            padding:0;
+            background:grey;
+            color:#fff;
+            display:flex;
+        }
+        .cardnavbar ul li {
+            list-style:none;
+        }
+        .cardnavbar ul li a{
+            text-decoration:none;
+            color:#fff;
+            padding:20px 113.2px;
+            display:block;
+        }
+        .cardnavbar ul li a:hover {
+            background-color: #111;
+        }
+        .floating-box .insurance h3{
+
+        }
+        section{
+            height:0;
+        }
+        .sticky{
+            position: fixed;
+            top:0;
+            left:0;
+            margin-left:32px;
+            width:95%;
+        }
+        .floating-box {
+            display: inline-block;
+            width: 45%;
+            height: 250px;
+            margin: 25px;
+        }
+        .Glance{
+            margin-top:50px;
+            margin-bottom:50px;
+            text-align:center;
+        }
+        h3{
+            font-weight:bold;
+        }
+        .inform{
+            margin-left:20px;
+        }
+        table {
+            order-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .button {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 4px 2px;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        .button3 {
+            background-color: white;
+            color: black;
+            border: 2px solid #f44336;
+        }
+
+        .button3:hover {
+            background-color: #ff661a;
+            color: white;
+        }
+        .button3 {
+            border-radius: 8px;
+        }
+        .cardimg{
+            margin-left:30%;
+        }
+        .cardinform{
+            text-align: center;
+        }
+        #readmore-btn{
+            background-color: #555555;
+            border: none;
+            color: white;
+            padding: 7px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 11px;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-left:43%;
+        }
+        #readmore-btn:hover {
+            background-color: darkgrey;
+            color: white;
+}
+        #panelleft,#panelright{
+            display: none;
+        }
+        .smallnotes{
+            color: darkgrey;
+        }
+        .redtext{
+            color:red;
+        }
+        .txtcenter{
+            text-align: center;
+        }
+        .line{
+            border-color: red;
+        }
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #ff661a;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        #myBtn:hover {
+            background-color: #555;
+        }
+    </style>
+
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(window).scroll(function(){
+            if($(this).scrollTop()>350){
+                $('.cardnavbar').addClass("sticky");
+            }
+            else
+                {
+                    $('.cardnavbar').removeClass("sticky")}
+        })
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flipleft").click(function(){
+                $("#panelleft").slideToggle("slow");
+            });
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flipright").click(function(){
+                $("#panelright").slideToggle("slow");
+            });
+        });
+    </script>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Credit Card</title>
+</head>
+
+    <div class="body">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <div class="heading">
+        <img src = "\static\images\1.png" width="250" height="220" >
+        <h1>DBS NUS Alumni & DBS NUSS Cards</h1>
+        <br>
+    </div>
+        <div class="cardnavbar">
+        <ul>
+            <li><a href="#Glanceid">At a Glance</a></li>
+			<li><a href="#Eligibilityid">Eligibility & Fees</a></li>
+			<li><a href="#Howtoapplyid">How to Apply</a></li>
+            <li><a href="#Applyid">Apply</a></li>
+		</ul>
+    </div>
+
+    <div class="main">
+        <div class="Glance">
+            <div id="Glanceid"><h3>At a Glance</h3></div>
+            <p>No minimum income required and comes with a S$500 credit limit.</p>
+        </div>
+
+        <hr>
+
+        <div class="floating-box">
+            <div class="cardimg">
+                <img src = "\static\images\2.png" width="200" height="130">
+            </div>
+            <div class="cardinform">
+                <p>DBS NUS Alumni Card</p>
+                <p>A Credit Card packed with rewards, that gives back to your alma mater each time you spend.</p>
+            </div>
+            <div id="flipleft">
+                <button id="readmore-btn">Read more</button>
+            </div>
+        </div>
+
+        <div class="floating-box">
+            <div class="cardimg">
+                <img src = "\static\images\3.png"  width="200" height="130">
+            </div>
+            <div class="cardinform">
+                <p>DBS NUSS Card</p>
+                <p>A membership card and credit card in one, the essential card for every NUSS member.</p>
+            </div>
+
+            <div id="flipright">
+            <button id="readmore-btn">Read more</button>
+        </div>
+        </div>
+
+        <div class="inform">
+        <div id="panelleft">
+        <h3>DBS NUS Alumni Card</h3>
+        <h5>The only card that gives back to your alma mater</h5>
+        <li>With every transaction made on your DBS NUS Alumni Card, we will make a contribution to support NUS students in bursaries and awards</li>
+        <h5>AlumNUS exclusive</h5>
+        <li>Indulge in entertainment, dining, shopping and wellness privileges on campus and islandwide</li>
+        <p>Click <a href="#" class="redtext">here</a> to learn more about your privileges</p>
+        <br>
+            <h5>Enjoy DBS Rewards while you spend</h5>
+        <li>Earn 1 DBS Rewards Point for every S$5 you charge to your cards</li>
+        <li>Redeem any of the tempting perks in our DBS Rewards catalogue with your points</li>
+        <p>Click <a href="#" class="redtext">here</a> to learn more about DBS Rewards</p>
+        </div>
+
+        <div id="panelright">
+        <h3>DBS NUSS Card</h3>
+        <h5>All-in-One-Card</h5>
+        <p>Enjoy the convenience of a combined credit and membership card </p>
+        <li>Auto-charge NUSS bills to your Card while staying connected to the country’s foremost graduate society</li>
+        <li>Complimentary annual fee waiver as long as you’re a NUSS Member</li>
+            <br>
+            <h5>Up to 2X DBS Points</h5>
+        <li>Earn 2 DBS Rewards Points for every S$5 spend at any of the NUSS F&B outlets</li>
+        <li>Earn 1 DBS Rewards Point for every S$5 you charge to your card islandwide</li>
+        <li>Exchange these points for any of the other tempting perks in our DBS Rewards catalogue</li>
+        <p>Visit <a href="/ThirdParty" class="redtext">here</a> for the list of NUSS Food & Beverage outlets.</p>
+        <p>Click <a href="#" class="redtext">here</a> to learn more about DBS Rewards</p>
+        <br>
+            <h5>Exclusive Benefits</h5>
+        <li>Take flight with NUSS today</li>
+        <p>Travel in style with NUSS and Dnata today! Enjoy complimentary access to premium airport lounges at Changi Airport! Learn more <a href="#" class="redtext">here</a>.</p>
+        <li>Make fitness your lifestyle</li>
+        <p>Kickstart a healthy lifestyle with True Fitness! Enjoy complimentary access to four True Fitness gym facilities and its various fitness classes. Learn more <a href="#" class="redtext">here</a>.</p>
+        <p>Click <a href="#" class="redtext">here</a> to learn more about DBS NUSS Card Privileges.</p>
+        <br>
+        </div>
+        <hr>
+
+            <div class="txtcenter">
+                <div id="Eligibilityid"><h3>Eligibility & Fees</h3></div>
+                <p>Please take a moment to review the below eligibility criteria as well as documents required before completing the online application process.</p>
+            </div>
+
+                <table>
+            <tr>
+                <th class="line"><h4><b>DBS NUS Alumni Card</b></h4></th>
+                <td class="line"></td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>21 years and above</td>
+            </tr>
+            <tr>
+                <th>Income</th>
+                <td><p>S$30,000 and above per annum (Singaporean and PR)</p>
+                    <p>S$45,000 and above per annum (Foreigner)</p>
+                    <p>Note: All applicants must be a graduate of National University of Singapore.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Annual Fees</th>
+                <td><p>S$128.40 (Principal card)</p>
+                    <p>S$77.04 (each Supplementary card)</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Fee Waiver</th>
+                <td>2 Years</td>
+            </tr>
+        </table>
+        <p class="smallnotes">Note: All fees indicated are inclusive of GST where applicable.</p>
+        <br>
+            <br>
+        <table>
+            <tr>
+            <th class="line"><h4><b>DBS NUS Alumni Card</b></h4></th>
+            <td class="line"></td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>21 years and above</td>
+            </tr>
+            <tr>
+                <th>Income</th>
+                <td><p>S$30,000 and above per annum (Singaporean and PR)</p>
+                    <p>S$45,000 and above per annum (Foreigner)</p>
+                    <p>Note: All applicants must be a graduate of National University of Singapore.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Annual Fees</th>
+                <td><p>S$128.40 (Principal card)</p>
+                    <p>S$77.04 (each Supplementary card)</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Fee Waiver</th>
+                <td>2 Years</td>
+            </tr>
+        </table>
+            <p class="smallnotes">Note: All fees indicated are inclusive of GST where applicable.</>
+        </div>
+    </div>
+        <br>
+        <hr>
+        <div class="txtcenter">
+            <div id="Howtoapplyid"><h3>How to apply</h3></div>
+        </div>
+        <table>
+            <tr>
+                <th class="line"><h4><b>DBS NUS Alumni Card</b></h4></th>
+            <td class="line"></td>
+            </tr>
+            <tr>
+                <th width="20%"><img src = "\static\images\3.png" width="120" height="80"></th>
+                <td><h4><b>DBS NUS Alumni Card</b></h4>
+                    <p>A Credit Card packed with rewards, that gives back to your alma mater each time you spend.</p>
+                    <ul>
+                        <li><b>Step 1</b> – Complete the <a href="#" class="redtext">online application</a>, print the form and sign it.</li>
+                        <li><b>Step 2</b> – Mail or fax the form to us with a copy of your AlumNUS card or commencement scroll and all other required documents (<a href="/ThirdParty" class="redtext">please click</a> here for a document checklist). <a href="/ThirdParty" class="redtext">Click here</a> if you wish to submit your CPF statement online. Extend the suite of DBS benefits and privileges to your loved ones with DBS NUS Alumni Supplementary Cards!*</li>
+                        <p><a href="#" class="redtext">Click here</a> to apply now.</p>
+                    <p>*To be eligible, applicants must be graduates or staff of the National University of Singapore or its predecessor institutions. Please submit a photocopy of your NRIC (Front and Back) or Passport.</p></td>
+            </tr>
+            <tr>
+                <th width="20%"><img src = "\static\images\2.png"  width="120" height="80"></th>
+                <td><h4><b>DBS NUSS Card</b></h4>
+                    <p>A membership card and credit card in one, which takes care of your NUSS bills while giving you exclusive Platinum privileges, <a href="#" class="redtext">DBS Rewards</a> and dining offers. The essential card for every NUSS member.
+                    <ul>
+                        <li><b>Step 1</b> – Sign up for membership at NUSS Guild House.</li>
+                        <li><b>Step 2</b> – Complete the <a href="#" class="redtext">application form</a>, print the form and sign it.</li>
+                        <li><b>Step 3</b> – Mail or fax the form to us with the <a href="/ThirdParty" class="redtext">required documents</a>. You may wish to submit your <a href="/ThirdParty" class="redtext">CPF Statement online</a>.</li>
+                    </ul>
+                    <p>Alternatively, visit any of the NUSS Guild Houses to get an application form.</p>
+
+                </td>
+        </table>
+
+        <div class='button'>
+            <a href="/application">
+            <button class="button button3" type="button" alt="")"><div id="Applyid">APPLY</div></button></p>
+            </a>>
+        </div>
+    </div>
+{% endblock %}

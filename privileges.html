@@ -1,0 +1,275 @@
+{% extends 'layout.html' %}
+{% block body %}
+<style>
+    body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 10;
+    left: 0;
+    background-color: #E5E5E5;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#header2{
+    margin-left:7%;
+    position:absolute;
+}
+.header2{
+    margin-left:7%;
+    position:absolute;
+    margin-top:4%;
+    font-size:13px;
+    color:#9C9C9C
+}
+body2 {margin:0;}
+
+.icon-bar {
+    width: 80%;
+    overflow: auto;
+    height:7%;
+    margin-left:9%;
+    margin-top:3%;
+}
+
+.icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: black;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: #9C9C9C;
+}
+.insurance{
+    margin-left:45%;
+    margin-top: 11%;
+}
+#insurance{
+    margin-left:31%;
+    font-size:13px;
+    color: purple;
+    margin-top:4%;
+}
+.courts{
+    margin-left:45%;
+    margin-top:11%;
+}
+#courts{
+    margin-left:38%;
+    font-size:13px;
+    color: purple;
+    margin-top:4%;
+}
+.bakerzin{
+    margin-left:45%;
+    margin-top: 11%;
+}
+#bakerzin{
+    margin-left:37%;
+    font-size:13px;
+    color: purple;
+    margin-top:4%;
+}
+.samsung{
+    margin-left:45%;
+    margin-top: 11%;
+}
+#samsung{
+    margin-left:37%;
+    font-size:13px;
+    color: purple;
+    margin-top:4%;
+}
+.zouk{
+    margin-left:45%;
+    margin-top: 11%;
+}
+#zouk{
+    margin-left:31%;
+    font-size:13px;
+    color: purple;
+    margin-top:4%;
+}
+.true{
+    margin-left:45%;
+    margin-top: 11%;
+}
+#true{
+    margin-left:31%;
+    font-size:13px;
+    color: purple;
+    margin-top:4%;
+}
+.floating-box0{
+    display:inline-block;
+    width:40%;
+    height:250px;
+    background-color:#f5f7fb;
+    margin-left:9.1%;
+}
+.floating-box1 {
+    display: inline-block;
+    width: 40%;
+    height: 250px;
+    background-color: white;
+}
+.floating-box2 {
+    display: inline-block;
+    width: 40%;
+    height: 250px;
+    background-color: #f5f6fb;
+
+}
+.floating-box3 {
+    display: inline-block;
+    width: 40%;
+    height: 250px;
+    background-color: white;
+    margin-left: 9.1%;
+}
+.floating-box4{
+    display:inline-block;
+    width:40%;
+    height:250px;
+    background-color:#f5f7fb;
+    margin-left:9.1%;
+}
+.floating-box5 {
+    display: inline-block;
+    width: 40%;
+    height: 250px;
+    background-color: white;
+}
+</style>
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDBS</a>
+  <a href="#">&nbsp&nbsp&nbsp&nbsp&nbspOCBC</a>
+  <a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUOB</a>
+    </div>
+<div id="main">
+    <h2 id="header2">Best deals at your fingertips!</h2>
+<p class="header2">More than 100 deals at your favorite branch with your DBS Cards</p>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+</div>
+<body2>
+        <div class="icon-bar">
+          <a href="/travelInsurance"><i class="fa fa-plane"></i></a>
+          <a href="/courts"><i class="fa fa-shopping-bag"></i></a>
+          <a href="/bakerzin"><i class="fa fa-cutlery"></i></a>
+          <a href="/samsung"><i class="fa fa-shopping-cart"></i></a>
+          <a href="#"><i class="fa fa-search"></i></a>
+        </div>
+</body2>
+    <hr class="split-line-1">
+<div class="floating-box0">
+    <div class="insurance">
+        <a href="/travelInsurance"><img src="/static/images/insurance.jpg" width="60px" height="60px" class="img-rounded"></a>
+    </div>
+    <div id="insurance">
+        <b><h3>Traveller Insurance</h3></b>
+        <p>50% off Single Trip Insurance Plans</p>
+        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspValid till 31/12/2017</p>
+    </div>
+</div>
+<div class="floating-box1">
+    <div class="courts">
+        <a href="/courts"><img src="/static/images/courts.jpg" width="60px" height="60px" class="img-rounded"></a>
+    </div>
+    <div id="courts">
+        <b><h3>&nbsp&nbsp&nbsp&nbspCourts</h3></b>
+        <p>5% off on Apple products</p>
+        <p>01/07/2017 to 31/12/2017</p>
+    </div>
+</div>
+<div class="floating-box3">
+    <div class="bakerzin">
+        <a href="/bakerzin"><img src="/static/images/bakerzin.jpg" width="60px" height="60px" class="img-rounded"></a>
+    </div>
+    <div id="bakerzin">
+        <b><h3>&nbsp&nbspBakerzin</h3></b>
+        <p>&nbsp&nbsp&nbsp15% off total Bill</p>
+        <p>01/01/2017 to 31/12/2017</p>
+    </div>
+</div>
+<div class="floating-box2">
+    <div class="samsung">
+        <a href="/samsung"><img src="/static/images/samsung.jpg" width="60px" height="60px" class="img-rounded"></a>
+    </div>
+    <div id="samsung">
+        <b><h3>Samsung Pay</h3></b>
+        <p>S$10 cashback on Cards</p>
+        <p>16/06/2017 to 31/12/2017</p>
+    </div>
+</div>
+<div class="floating-box4">
+    <div class="zouk">
+    <img src="/static/images/zouk.jpg" width="60px" height="60px" class="img-rounded">
+    </div>
+    <div id="zouk">
+        <b><h3>True Fitness</h3></b>
+        <p>Complimentary access to True Fitness or True Yoga twice every month</p>
+        <p>26/01/2017 to 25/01/2018</p>
+    </div>
+</div>
+<div class="floating-box5">
+    <div class="true">
+    <img src="/static/images/true.jpg" width="60px" height="60px" class="img-rounded">
+    </div>
+    <div id="true">
+        <b><h3>True Fitness</h3></b>
+        <p>Complimentary access to True Fitness or True Yoga twice every month</p>
+        <p>26/01/2017 to 25/01/2018</p>
+    </div>
+</div>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</html>
+
+
+{% endblock %}l>

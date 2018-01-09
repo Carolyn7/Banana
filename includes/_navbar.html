@@ -1,0 +1,74 @@
+<style>
+.nav ul {
+    color:white;
+    height:40px;
+    width:100%;
+}
+.nav a {
+    font-size:20px;
+}
+.nav .side {padding:10px;
+
+    }
+.nav #words{
+    padding:25px;
+}
+.nav li{
+    font-size:20px;
+}
+.dropdown li {
+    background-color: darkgrey;
+    color: white;
+}
+</style>
+
+<nav id="bar" role="navigation" class="navbar navbar-inverse" id="navi">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+                <li class="side"><a href="/home">Home</a></li>
+                <li class="side"><a href="/debitcard">Debit Cards</a></li>
+                <li class="side"><a href="#">Credit Cards</a></li>
+                <li class="side"><a href="/compare1">Compare Cards</a></li>
+                <li class="dropdown">
+                    <a id="words" href="/privileges" class="dropdown-toggle" data-toggle="dropdown">Card Promotions<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a tabindex="-1" href="#">DBS<span class="caret"></span></a></li>
+                    <ul class="dropdown">
+                    <li><a href="/privileges1" target="_blank">Privileges</a></li>
+                    <li><a href="#" target="_blank">Promotions</a></li>
+                    </ul>
+                    <br>
+                    <li><a tabindex="-1" href="#">OCBC<span class="caret"></span></a></li>
+                    <ul class="dropdown">
+                    <li><a href="/privileges1" target="_blank">Privileges</a></li>
+                    <li><a href="#" target="_blank">Promotions</a></li>
+                    </ul>
+                    <br>
+                    <li><a tabindex="-1" href="#">UOB<span class="caret"></span></a></li>
+                    <ul class="dropdown">
+                    <li><a href="/privileges1" target="_blank">Privileges</a></li>
+                    <li><a href="#" target="_blank">Promotions</a></li>
+                    </ul>
+
+                    <li class="divider"></li>
+                    <li><a tabindex="-1" href="#" target="_blank">Why Us?</a></li>
+                    <li><a tabindex="-1" href="#" target="_blank">Contact Us</a></li>
+                </ul>
+                </li>
+                    <li class="side"><a href ="/Login">My Account</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+
+</nav>
